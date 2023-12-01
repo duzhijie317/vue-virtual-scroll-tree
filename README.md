@@ -1,6 +1,6 @@
 [![npm](https://img.shields.io/npm/v/vue-virtual-scroll-tree.svg)](https://www.npmjs.com/package/vue-virtual-scroll-tree)
 [![vue2](https://img.shields.io/badge/vue-2.6+-brightgreen.svg)](https://vuejs.org/)
-[![last commit](https://img.shields.io/github/last-commit/wchbrad/vue-virtual-scroll-tree.svg)](https://www.npmjs.com/package/vue-virtual-scroll-tree)
+[![last commit](https://img.shields.io/github/last-commit/duzhijie317/vue-virtual-scroll-tree.svg)](https://www.npmjs.com/package/vue-virtual-scroll-tree)
 [![NPM downloads](https://img.shields.io/npm/dm/vue-virtual-scroll-tree.svg?style=flat)](https://npmjs.org/package/vue-virtual-scroll-tree)
 [![license](https://img.shields.io/npm/l/vue-virtual-scroll-tree.svg?maxAge=2592000)](http://www.opensource.org/licenses/mit-license.php)
 
@@ -64,7 +64,7 @@ export default {
 
 ```html
 <template>
-  <div class="ve-tree" style="height:calc(100vh - 20px)">
+  <div class="vue-virtual-scroll-tree" style="height:calc(100vh - 20px)">
   <!-- Just remove the height parameter when not using virtual scrolling -->
     <vue-virtual-scroll-tree
       ref="veTree"
@@ -137,7 +137,7 @@ Then directly import the above style files in `main.js`：
 ```JS
 import Vue from 'vue'
 import VueVirtualScrollTree from "vue-virtual-scroll-tree";
-import "./css/ve-tree-var.scss"
+import "./css/vue-virtual-scroll-tree-var.scss"
 
 Vue.use(VueVirtualScrollTree)
 ```
