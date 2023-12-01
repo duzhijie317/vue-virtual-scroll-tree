@@ -32,8 +32,8 @@
         :key="view.nr.id"
         :style="ready ? {
           transform: `translate${direction === 'vertical' ? 'Y' : 'X'}(${view.position}px) translate${direction === 'vertical' ? 'X' : 'Y'}(${view.offset}px)`,
-          width: gridItems ? `${direction === 'vertical' ? itemSecondarySize || itemSize : itemSize}px` : undefined,
-          height: gridItems ? `${direction === 'horizontal' ? itemSecondarySize || itemSize : itemSize}px` : undefined,
+          width: gridItems ? `${direction === 'vertical' ? itemSecondarySize : itemSize}px` : undefined,
+          height: gridItems ? `${direction === 'horizontal' ? itemSecondarySize : itemSize}px` : undefined,
         } : null"
         class="vue-recycle-scroller__item-view"
         :class="[
