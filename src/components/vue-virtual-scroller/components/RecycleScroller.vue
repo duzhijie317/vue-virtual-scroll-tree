@@ -676,11 +676,7 @@ export default {
       if (this.itemSize === null) {
         scroll = index > 0 ? this.sizes[index - 1].accumulator : 0
       } else {
-        console.log('index:', index)
-        console.log('gridItems:', this.gridItems)
-        console.log('itemSize:', this.itemSize)
         scroll = Math.floor(index / this.gridItems) * this.itemSize
-        console.log('scroll:', scroll)
       }
       this.scrollToPosition(scroll)
     },

@@ -119,6 +119,7 @@ export default {
     },
     defaultCheckedKeys: Array,
     defaultExpandedKeys: Array,
+    scrollToDefaultExpandedKey: [String, Number],
     currentNodeKey: [String, Number],
     renderContent: Function,
     showCheckbox: {
@@ -260,7 +261,6 @@ export default {
 
         return smoothArr;
       }, []);
-      console.log('smoothTree:', smoothTree);
       return smoothTree;
     },
     filter(value) {
@@ -278,8 +278,6 @@ export default {
         const index = virtualInstance.items.findIndex((e) => {
           return e.key === key;
         });
-        console.log('index:', index);
-        console.log('virtualInstance:', virtualInstance);
         this.$nextTick(() => {
           virtualInstance.scrollToItem(index);
         });
@@ -666,6 +664,7 @@ export default {
   mounted() {
     this.initTabIndex();
     this.$el.addEventListener("keydown", this.handleKeydown);
+    if (this.scrollToDefaultExpandedKey) this.scrollToItem(this.scrollToDefaultExpandedKey);
   },
 
   updated() {
