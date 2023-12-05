@@ -19,6 +19,7 @@
     "url": "git+https://github.com/duzhijie317/vue-virtual-scroll-tree.git"
   },
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
