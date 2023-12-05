@@ -107,6 +107,11 @@ export default {
       default: undefined,
     },
 
+    activeIndex: {
+      type: Number,
+      default: null,
+    },
+
     itemSecondarySize: {
       type: Number,
       default: undefined,
@@ -220,6 +225,14 @@ export default {
     pageMode () {
       this.applyPageMode()
       this.updateVisibleItems(false)
+    },
+
+    activeIndex (val) {
+      if (!!val) {
+        this.$nextTick(() => {
+          this.scrollToItem(val)
+        })
+      }
     },
 
     sizes: {
@@ -707,7 +720,6 @@ export default {
         scrollDirection = direction.scroll
         scrollDistance = position
       }
-
       viewport[scrollDirection] = scrollDistance
     },
 

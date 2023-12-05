@@ -19,7 +19,8 @@
       key-field="key"
       :items="dataList"
       :item-size="itemSize"
-      :gridItems="gridItems"
+      :grid-items="gridItems"
+      :active-index="activeIndex"
       :buffer="50"
     >
       <template slot-scope="{ active, item }">
@@ -174,6 +175,7 @@ export default {
       store: null,
       root: null,
       currentNode: null,
+      activeIndex: 0,
       treeItems: null,
       checkboxItems: [],
       dragState: {
@@ -269,7 +271,7 @@ export default {
       this.store.filter(value);
     },
 
-    scrollToItem(key) {
+    computeActiveIndex(key) {
       if (this.height && !this.isEmpty) {
         const virtualInstance = this.$children.find(
           (c) => c.$options.name === "RecycleScroller"
@@ -278,9 +280,7 @@ export default {
         const index = virtualInstance.items.findIndex((e) => {
           return e.key === key;
         });
-        this.$nextTick(() => {
-          virtualInstance.scrollToItem(index);
-        });
+        this.activeIndex = index
       } else {
         throw new Error(
           "scrollToItem can only be used when using virtual scrolling"
@@ -664,7 +664,10 @@ export default {
   mounted() {
     this.initTabIndex();
     this.$el.addEventListener("keydown", this.handleKeydown);
-    if (this.scrollToDefaultExpandedKey) this.scrollToItem(this.scrollToDefaultExpandedKey);
+    this.$nextTick(() => {
+      if (this.scrollToDefaultExpandedKey) this.computeActiveIndex(this.scrollToDefaultExpandedKey);
+    })
+
   },
 
   updated() {

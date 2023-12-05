@@ -1,10 +1,10 @@
-[![npm](https://img.shields.io/npm/v/el-virtual-scroll-tree.svg)](https://www.npmjs.com/package/el-virtual-scroll-tree)
+[![npm](https://img.shields.io/npm/v/@duzhijie/vue-virtual-scroll-tree.svg)](https://www.npmjs.com/package/@duzhijie/vue-virtual-scroll-tree)
 [![vue2](https://img.shields.io/badge/vue-2.6+-brightgreen.svg)](https://vuejs.org/)
-[![last commit](https://img.shields.io/github/last-commit/duzhijie317/el-virtual-scroll-tree.svg)](https://www.npmjs.com/package/el-virtual-scroll-tree)
-[![NPM downloads](https://img.shields.io/npm/dm/el-virtual-scroll-tree.svg?style=flat)](https://npmjs.org/package/el-virtual-scroll-tree)
-[![license](https://img.shields.io/npm/l/el-virtual-scroll-tree.svg?maxAge=2592000)](http://www.opensource.org/licenses/mit-license.php)
+[![last commit](https://img.shields.io/github/last-commit/duzhijie317/vue-virtual-scroll-tree.svg)](https://www.npmjs.com/package/@duzhijie/vue-virtual-scroll-tree)
+[![NPM downloads](https://img.shields.io/npm/dm/@duzhijie/vue-virtual-scroll-tree.svg?style=flat)](https://npmjs.org/package/@duzhijie/vue-virtual-scroll-tree)
+[![license](https://img.shields.io/npm/l/@duzhijievue-virtual-scroll-tree.svg?maxAge=2592000)](http://www.opensource.org/licenses/mit-license.php)
 
-# el-virtual-scroll-tree
+# @duzhijie/vue-virtual-scroll-tree
 
 ## 介绍
 
@@ -16,13 +16,13 @@
 ## 安装
 
 ```
-npm install el-virtual-scroll-tree
+npm install @duzhijie/vue-virtual-scroll-tree
 ```
 
 或
 
 ```
-yarn add el-virtual-scroll-tree
+yarn add @duzhijie/vue-virtual-scroll-tree
 ```
 
 ## 引入
@@ -33,9 +33,9 @@ yarn add el-virtual-scroll-tree
 
 ```JS
 import Vue from "vue";
-import ElVirtualScrollTree from "el-virtual-scroll-tree";
+import VueVirtualScrollTree from "@duzhijie/vue-virtual-scroll-tree";
 
-Vue.use(ElVirtualScrollTree)
+Vue.use(VueVirtualScrollTree)
 ```
 
 ### 组件引入
@@ -43,13 +43,13 @@ Vue.use(ElVirtualScrollTree)
 在组件中引入：
 
 ```JS
-import ElVirtualScrollTree from "el-virtual-scroll-tree";
+import VueVirtualScrollTree from "@duzhijie/vue-virtual-scroll-tree";
 // 样式文件，可以根据需要自定义样式或主题
-import "el-virtual-scroll-tree/src/assets/index.scss"
+import "@duzhijie/vue-virtual-scroll-tree/src/assets/index.scss"
 
 export default {
   components: {
-    ElVirtualScrollTree
+    VueVirtualScrollTree
   }
 }
 ```
@@ -61,7 +61,7 @@ export default {
 **来自[element-ui 官方文档](https://element.eleme.cn/#/zh-CN/component/tree)**<br />
 **需要使用虚拟滚动时，增加 `height` 属性即可，如：**
 ```html
-<el-virtual-scroll-tree :data="data" height="calc(100vh - 20px)" :props="defaultProps" @node-click="handleNodeClick"></el-virtual-scroll-tree>
+<vue-virtual-scroll-tree :data="data" height="calc(100vh - 20px)" :props="defaultProps" @node-click="handleNodeClick"></vue-virtual-scroll-tree>
 ```
 
 **[快速查看示例和api](./element-ui-tree.zh-CN.md)**

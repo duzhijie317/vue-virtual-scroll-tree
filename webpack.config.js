@@ -4,6 +4,7 @@ const NODE_ENV = process.env.NODE_ENV
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const { SourceMapDevToolPlugin } = webpack;
 
 module.exports = {
     mode: NODE_ENV,
@@ -18,6 +19,10 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin(),
+        new SourceMapDevToolPlugin({
+          append: false,
+          filename: 'sourcemaps/[file].map',
+        }),
         new HtmlWebpackPlugin({
           template: path.resolve("./index.html"),
           minify: {

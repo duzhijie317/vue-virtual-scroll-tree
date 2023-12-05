@@ -1,12 +1,10 @@
-[![npm](https://img.shields.io/npm/v/el-virtual-scroll-tree.svg)](https://www.npmjs.com/package/el-virtual-scroll-tree)
+[![npm](https://img.shields.io/npm/v/el-virtual-scroll-tree.svg)](https://www.npmjs.com/package/@duzhijie/vue-virtual-scroll-tree)
 [![vue2](https://img.shields.io/badge/vue-2.6+-brightgreen.svg)](https://vuejs.org/)
-[![last commit](https://img.shields.io/github/last-commit/duzhijie317/el-virtual-scroll-tree.svg)](https://www.npmjs.com/package/el-virtual-scroll-tree)
-[![NPM downloads](https://img.shields.io/npm/dm/el-virtual-scroll-tree.svg?style=flat)](https://npmjs.org/package/el-virtual-scroll-tree)
-[![license](https://img.shields.io/npm/l/el-virtual-scroll-tree.svg?maxAge=2592000)](http://www.opensource.org/licenses/mit-license.php)
+[![last commit](https://img.shields.io/github/last-commit/duzhijie317/vue-virtual-scroll-tree.svg)](https://www.npmjs.com/package/@duzhijie/vue-virtual-scroll-tree)
+[![NPM downloads](https://img.shields.io/npm/dm/el-virtual-scroll-tree.svg?style=flat)](https://npmjs.org/package/@duzhijie/vue-virtual-scroll-tree)
+[![license](https://img.shields.io/npm/l/@duzhijievue-virtual-scroll-tree.svg?maxAge=2592000)](http://www.opensource.org/licenses/mit-license.php)
 
-# el-virtual-scroll-tree
-
-**English** | [中文](./README.zh-CN.md)
+# @duzhijie/vue-virtual-scroll-tree
 
 ## Introduction
 vue2.x virtual scrolling tree component .
@@ -35,11 +33,11 @@ Import in the `main.js` file:
 
 ```JS
 import Vue from "vue";
-import ElVirtualScrollTree from "el-virtual-scroll-tree";
+import VueVirtualScrollTree from "@duzhijie/vue-virtual-scroll-tree";
 // Style file, you can customize the style or theme according to your needs
-import "el-virtual-scroll-tree/src/assets/index.scss"
+import "@duzhijie/vue-virtual-scroll-tree/src/assets/index.scss"
 
-Vue.use(ElVirtualScrollTree)
+Vue.use(VueVirtualScrollTree)
 ```
 
 ### mount with component
@@ -47,13 +45,13 @@ Vue.use(ElVirtualScrollTree)
 Import in the component：
 
 ```JS
-import ElVirtualScrollTree from "el-virtual-scroll-tree";
+import VUeVirtualScrollTree from "@duzhijie/vue-virtual-scroll-tree";
 // Style file, you can customize the style or theme according to your needs
-import "el-virtual-scroll-tree/src/assets/index.scss"
+import "@duzhijie/vue-virtual-scroll-tree/src/assets/index.scss"
 
 export default {
   components: {
-    ElVirtualScrollTree
+    VueVirtualScrollTree
   }
 }
 ```
@@ -64,15 +62,15 @@ export default {
 
 ```html
 <template>
-  <div class="el-virtual-scroll-tree" style="height:calc(100vh - 20px)">
+  <div class="vue-virtual-scroll-tree" style="height:calc(100vh - 20px)">
   <!-- Just remove the height parameter when not using virtual scrolling -->
-    <el-virtual-scroll-tree
+    <vue-virtual-scroll-tree
       ref="veTree"
       node-key="id"
       height="calc(100vh - 20px)"
       :data="treeData"
       :props="props"
-    ></el-virtual-scroll-tree>
+    ></vue-virtual-scroll-tree>
   </div>
 </template>
 
@@ -93,26 +91,26 @@ export default {
 ```
 
 ## Change SCSS variables in the project
-By creating a new style file, such as: `el-virtual-scroll-tree-var.scss`, write the following content：
+By creating a new style file, such as: `vue-virtual-scroll-tree-var.scss`, write the following content：
 
 ```JS
 /* Change theme color variable */
 $--color-primary: #ea5404;
 
 /* Change the icon font path variable, required */
-$--font-path: "~el-virtual-scroll-tree/src/assets/fonts";
+$--font-path: "~vue-virtual-scroll-tree/src/assets/fonts";
 
-@import "el-virtual-scroll-tree/src/assets/index.scss";
+@import "vue-virtual-scroll-tree/src/assets/index.scss";
 ```
 :warning: It should be noted that it is necessary to override the font path variable, and assign it to the relative path where the icon icon in el-virtual-scroll-tree is located.
 
 Then directly import the above style files in `main.js`：
 ```JS
 import Vue from 'vue'
-import ElVirtualScrollTree from "el-virtual-scroll-tree";
-import "./css/el-virtual-scroll-tree-var.scss"
+import VueVirtualScrollTree from "@duzhijie/vue-virtual-scroll-tree";
+import "./css/vue-virtual-scroll-tree-var.scss"
 
-Vue.use(ElVirtualScrollTree)
+Vue.use(VueVirtualScrollTree)
 ```
 
 ## Other properties and methods
@@ -120,7 +118,7 @@ Vue.use(ElVirtualScrollTree)
 **From [element-ui official document](https://element.eleme.cn/#/en-US/component/tree)**<br />
 **When you need to use virtual scrolling, just add the `height` property, such as:**
 ```html
-<el-virtual-scroll-tree :data="data" height="calc(100vh - 20px)" :props="defaultProps" @node-click="handleNodeClick"></el-virtual-scroll-tree>
+<vue-virtual-scroll-tree :data="data" height="calc(100vh - 20px)" :props="defaultProps" @node-click="handleNodeClick"></vue-virtual-scroll-tree>
 ```
 
 **[Quick view of examples and api](./element-ui-tree.md)**
