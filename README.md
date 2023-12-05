@@ -1,7 +1,7 @@
-[![npm](https://img.shields.io/npm/v/el-virtual-scroll-tree.svg)](https://www.npmjs.com/package/@duzhijie/vue-virtual-scroll-tree)
+[![npm](https://img.shields.io/npm/v/@duzhijie/vue-virtual-scroll-tree.svg)](https://www.npmjs.com/package/@duzhijie/vue-virtual-scroll-tree)
 [![vue2](https://img.shields.io/badge/vue-2.6+-brightgreen.svg)](https://vuejs.org/)
 [![last commit](https://img.shields.io/github/last-commit/duzhijie317/vue-virtual-scroll-tree.svg)](https://www.npmjs.com/package/@duzhijie/vue-virtual-scroll-tree)
-[![NPM downloads](https://img.shields.io/npm/dm/el-virtual-scroll-tree.svg?style=flat)](https://npmjs.org/package/@duzhijie/vue-virtual-scroll-tree)
+[![NPM downloads](https://img.shields.io/npm/dm/@duzhijie/vue-virtual-scroll-tree.svg?style=flat)](https://npmjs.org/package/@duzhijie/vue-virtual-scroll-tree)
 [![license](https://img.shields.io/npm/l/@duzhijievue-virtual-scroll-tree.svg?maxAge=2592000)](http://www.opensource.org/licenses/mit-license.php)
 
 # @duzhijie/vue-virtual-scroll-tree
