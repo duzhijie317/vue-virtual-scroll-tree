@@ -1,4 +1,4 @@
-[![npm](https://img.shields.io/npm/v/@duzhijie/el-virtual-scroll-tree.svg)](https://www.npmjs.com/package/el-virtual-scroll-tree)
+[![npm](https://img.shields.io/npm/v/el-virtual-scroll-tree.svg)](https://www.npmjs.com/package/el-virtual-scroll-tree)
 [![vue2](https://img.shields.io/badge/vue-2.6+-brightgreen.svg)](https://vuejs.org/)
 [![last commit](https://img.shields.io/github/last-commit/duzhijie317/vue-virtual-scroll-tree.svg)](https://www.npmjs.com/package/el-virtual-scroll-tree)
 [![NPM downloads](https://img.shields.io/npm/dm/el-virtual-scroll-tree.svg?style=flat)](https://npmjs.org/package/@duzhijie/el-virtual-scroll-tree)
