@@ -1,7 +1,7 @@
 {
-  "name": "@duzhijie/vue-virtual-scroll-tree",
+  "name": "el-virtual-scroll-tree",
   "description": "vue2 el-tree virtual-scroll",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "duzhijie",
   "license": "MIT",
   "private": false,
