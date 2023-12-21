@@ -5,103 +5,16 @@
 [![license](https://img.shields.io/npm/l/el-virtual-scroll-tree.svg?maxAge=2592000)](http://www.opensource.org/licenses/mit-license.php)
 
 # el-virtual-scroll-tree
+vue2.x virtual scrolling tree component .
+
+author：杜智杰
+connection: 3663305622@qq.com / duzhijie317@gmail.com
 
 ## Introduction
-vue2.x virtual scrolling tree component .
 
 Based on the tree style and function extracted from [element-ui](https://element.eleme.cn/#/en-US/component/tree)(License:MIT), combined with [vue-virtual-scroller](https://github.com/Akryum/vue-virtual-scroller)(License:MIT) tree component.
 
 ## Large data volume supports virtual scrolling
-
-## Props
-```Vue
-    data: {
-      type: Array,
-    },
-    emptyText: {
-      type: String,
-      default() {
-        return "暂无数据";
-      },
-    },
-    renderAfterExpand: {
-      type: Boolean,
-      default: true,
-    },
-    nodeKey: String,
-    checkStrictly: Boolean,
-    defaultExpandAll: Boolean,
-    expandOnClickNode: {
-      type: Boolean,
-      default: true,
-    },
-    checkOnClickNode: Boolean,
-    checkDescendants: {
-      type: Boolean,
-      default: false,
-    },
-    itemSize: {
-      type: Number,
-      default: 30,
-    },
-    gridItems: {
-      type: Number,
-      default: 1,
-    },
-    autoExpandParent: {
-      type: Boolean,
-      default: true,
-    },
-    defaultCheckedKeys: Array,
-    defaultExpandedKeys: Array,
-    scrollToDefaultExpandedKey: [String, Number],
-    currentNodeKey: [String, Number],
-    renderContent: Function,
-    showCheckbox: {
-      type: Boolean,
-      default: false,
-    },
-    draggable: {
-      type: Boolean,
-      default: false,
-    },
-    allowDrag: Function,
-    allowDrop: Function,
-    props: {
-      default() {
-        return {
-          children: "children",
-          label: "label",
-          disabled: "disabled",
-        };
-      },
-    },
-    lazy: {
-      type: Boolean,
-      default: false,
-    },
-    highlightCurrent: Boolean,
-    load: Function,
-    filterNodeMethod: Function,
-    accordion: Boolean,
-    indent: {
-      type: Number,
-      default: 18,
-    },
-    iconClass: String,
-    height: {
-      type: [String, Number],
-      default: 0,
-    },
-    extraLine: {
-      type: Number,
-      default: 8,
-    },
-    keeps: {
-      type: Number,
-      default: 40,
-    }
-```
 
 ## Install
 
@@ -144,6 +57,77 @@ export default {
     ElVirtualScrollTree
   }
 }
+```
+
+## Props
+
+```JS
+data: Array
+
+emptyText:  String
+
+renderAfterExpand: Boolean
+
+nodeKey: String
+
+checkStrictly: Boolean
+
+defaultExpandAll: Boolean
+
+expandOnClickNode: Boolean
+
+checkOnClickNode: Boolean
+
+checkDescendants: Boolean
+
+itemSize: Number
+
+gridItems: Number
+
+autoExpandParent: Boolean
+
+defaultCheckedKeys: Array
+
+defaultExpandedKeys: Array
+
+scrollToDefaultExpandedKey: [String, Number]
+
+currentNodeKey: [String, Number]
+
+renderContent: Function
+
+showCheckbox: Boolean
+
+draggable: Boolean
+
+allowDrag: Function
+
+allowDrop: Function
+
+props: {
+  children: "children",
+  label: "label",
+  disabled: "disabled"
+}
+lazy: Boolean
+
+highlightCurrent: Boolean
+
+load: Function
+
+filterNodeMethod: Function
+
+accordion: Boolean
+
+indent: Number
+
+iconClass: String
+
+height:  [String, Number]
+
+extraLine: Number
+
+keeps: Number
 ```
 
 ## Usage:

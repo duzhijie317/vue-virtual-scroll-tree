@@ -18,7 +18,7 @@
       }"
       key-field="key"
       :items="dataList"
-      :item-size="itemSize"
+      :item-size="treeNodeSize"
       :grid-items="gridItems"
       :active-index="activeIndex"
       :buffer="50"
@@ -26,9 +26,9 @@
       <template slot-scope="{ active, item }">
         <ElTreeVirtualNode
           v-if="active"
-          :style="`height: ${itemSize}px;`"
+          :style="`height: ${treeNodeSize}px;`"
           :node="item"
-          :item-size="itemSize"
+          :item-size="treeNodeSize"
           :render-content="renderContent"
           :show-checkbox="showCheckbox"
           :render-after-expand="renderAfterExpand"
@@ -42,7 +42,7 @@
         :key="getNodeKey(child)"
         :node="child"
         :props="props"
-        :itemSize="itemSize"
+        :item-size="treeNodeSize"
         :show-checkbox="showCheckbox"
         :render-content="renderContent"
         :render-after-expand="renderAfterExpand"
@@ -220,6 +220,12 @@ export default {
     dataList() {
       return this.smoothTree(this.root.childNodes);
     },
+
+    treeNodeSize() {
+      const htmlElement = document.documentElement || window.document.documentElement
+      const htmlFontSize = Number(getComputedStyle(htmlElement)['font-size'].slice(0, getComputedStyle(htmlElement)['font-size'].indexOf('px')));
+      return Number((this.itemSize * htmlFontSize / 100).toFixed(2)) || 72;
+    }
   },
 
   watch: {
