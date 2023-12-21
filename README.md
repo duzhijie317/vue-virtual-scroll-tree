@@ -7,7 +7,7 @@
 # el-virtual-scroll-tree
 vue2.x virtual scrolling tree component .
 
-author：duzhijie 杜智杰
+### author：duzhijie 杜智杰
 
 connection: 363305622@qq.com / duzhijie317@gmail.com
 

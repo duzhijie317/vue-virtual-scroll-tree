@@ -18,7 +18,7 @@
       }"
       key-field="key"
       :items="dataList"
-      :item-size="treeNodeSize"
+      :item-size="itemSize"
       :grid-items="gridItems"
       :active-index="activeIndex"
       :buffer="50"
@@ -26,9 +26,9 @@
       <template slot-scope="{ active, item }">
         <ElTreeVirtualNode
           v-if="active"
-          :style="`height: ${treeNodeSize}px;`"
+          :style="`height: ${itemSize}px;`"
           :node="item"
-          :item-size="treeNodeSize"
+          :item-size="itemSize"
           :render-content="renderContent"
           :show-checkbox="showCheckbox"
           :render-after-expand="renderAfterExpand"
@@ -42,7 +42,7 @@
         :key="getNodeKey(child)"
         :node="child"
         :props="props"
-        :item-size="treeNodeSize"
+        :itemSize="itemSize"
         :show-checkbox="showCheckbox"
         :render-content="renderContent"
         :render-after-expand="renderAfterExpand"
@@ -220,12 +220,6 @@ export default {
     dataList() {
       return this.smoothTree(this.root.childNodes);
     },
-
-    treeNodeSize() {
-      const htmlElement = document.documentElement || window.document.documentElement
-      const htmlFontSize = Number(getComputedStyle(htmlElement)['font-size'].slice(0, getComputedStyle(htmlElement)['font-size'].indexOf('px')));
-      return Number((this.itemSize * htmlFontSize / 100).toFixed(2)) || 72;
-    }
   },
 
   watch: {
@@ -568,15 +562,15 @@ export default {
         ? dropInner
           ? 0.25
           : dropNext
-          ? 0.45
-          : 1
+            ? 0.45
+            : 1
         : -1;
       const nextPercent = dropNext
         ? dropInner
           ? 0.75
           : dropPrev
-          ? 0.55
-          : 0
+            ? 0.55
+            : 0
         : 1;
 
       let indicatorTop = -9999;
